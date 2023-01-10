@@ -5,7 +5,7 @@ import AddAvatar from '../img/addAvatar.png';
 const Register = () => {
   return (
     // container
-    <div className="min-h-[100vh] grid place-items-center bg-orange-500">
+    <div className="min-h-[100vh] grid place-items-center bg-slate-300">
       {/* wrapper */}
       <div className="min-w-[450px] bg-white text-center font-base p-8 rounded-xl">
         <div className="mb-12">
