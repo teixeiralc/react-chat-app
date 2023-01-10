@@ -6,10 +6,16 @@
   .input_styles {
     @apply w-full p-2 border-2 border-transparent border-b-orange-400 outline-none focus:border-orange-400;
   }
+  .input_search {
+    @apply w-full p-1 border-[1px] bg-transparent border-transparent border-b-slate-600 outline-none focus:border-slate-500 focus:rounded-md;
+  }
   .title {
     @apply text-4xl font-bold text-orange-500 mb-2 leading-none;
   }
   .btn {
     @apply py-3 bg-orange-500 text-white text-xl tracking-wider uppercase hover:bg-orange-600 mt-4;
+  }
+  .avatar {
+    @apply rounded-[50%] object-cover w-10 h-10;
   }
 }
