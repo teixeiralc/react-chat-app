@@ -2,6 +2,9 @@
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    fontFamily: {
+      base: ['Space Grotesk', 'sans-serif'],
+    },
     extend: {},
   },
   plugins: [],
