@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactInfo from './ContactInfo';
 
 const Search = () => {
   return (
@@ -10,10 +11,7 @@ const Search = () => {
           placeholder="Pesquise por uma conversa"
         />
       </div>
-      <div className="flex items-center gap-2 cursor-pointer hover:bg-slate-900 px-4 py-2">
-        <img src="http://placekitten.com/200/300" alt="" className="avatar" />
-        <div>Name</div>
-      </div>
+      <ContactInfo />
     </div>
   );
 };

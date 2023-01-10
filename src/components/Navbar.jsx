@@ -5,11 +5,7 @@ const Navbar = () => {
     <div className="flex justify-between items-center bg-slate-900 h-20 p-4">
       <span className="font-bold">LT Chat</span>
       <div className="flex gap-2 items-center">
-        <img
-          src="http://placekitten.com/200/200"
-          alt=""
-          className="rounded-[50%] object-cover w-10 h-10"
-        />
+        <img src="http://placekitten.com/200/200" alt="" className="avatar" />
         <span>Name</span>
         <button
           type="button"
