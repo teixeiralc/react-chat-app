@@ -39,12 +39,14 @@ const Register = () => {
             await setDoc(doc(db, 'userChats', res.user.uid), {});
             navigate('/');
           } catch (error) {
-            setErr(true);
+            const errorMessage = error.message;
+            setErr(errorMessage);
           }
         });
       });
     } catch (error) {
-      setErr(true);
+      const errorMessage = error.message;
+      setErr(errorMessage);
     }
   };
 
@@ -63,7 +65,7 @@ const Register = () => {
             <input
               className="input_styles"
               type="text"
-              placeholder="Nome de usuário"
+              placeholder="Nome"
               required
             />
           </div>
@@ -102,7 +104,7 @@ const Register = () => {
             className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
             role="alert"
           >
-            <span className="block sm:inline">Algo deu errado.</span>
+            <span className="block sm:inline">{err}</span>
           </div>
         )}
         <p className="text-sm text-slate-600">

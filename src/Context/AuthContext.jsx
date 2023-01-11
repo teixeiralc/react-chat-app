@@ -5,11 +5,11 @@ import { auth } from '../firebase';
 export const AuthContext = React.createContext();
 
 export const AuthContextProvider = ({ children }) => {
-  const [currentUser, setCurrentUser] = React.useState({});
+  const [curUser, setCurUser] = React.useState({});
 
   React.useEffect(() => {
     const unsub = onAuthStateChanged(auth, (user) => {
-      setCurrentUser(user);
+      setCurUser(user);
     });
 
     return () => {
@@ -17,9 +17,9 @@ export const AuthContextProvider = ({ children }) => {
     };
   }, []);
 
-  return (
-    <AuthContext.Provider value={{ currentUser }}>
-      {children}
-    </AuthContext.Provider>
-  );
+  const value = React.useMemo(() => {
+    return { curUser };
+  }, [curUser]);
+
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
