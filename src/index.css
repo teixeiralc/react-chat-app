@@ -10,7 +10,7 @@
     @apply w-full p-1 border-[1px] bg-transparent border-transparent border-b-slate-600 outline-none focus:border-slate-500 focus:rounded-md;
   }
   .input_chat {
-    @apply w-[50%] h-14 p-2 outline-none text-slate-700;
+    @apply h-14 p-2 outline-none text-slate-700;
   }
   .title {
     @apply text-4xl font-bold text-slate-900 mb-2 leading-none;
@@ -20,5 +20,14 @@
   }
   .avatar {
     @apply rounded-[50%] object-cover w-12 h-12;
+  }
+  .owner_msg {
+    @apply flex-row-reverse;
+  }
+  .owner_p {
+    @apply bg-blue-200 py-2 px-4 rounded-tl-xl rounded-bl-xl rounded-tr-xl max-w-max self-end;
+  }
+  .contact_p {
+    @apply bg-white py-2 px-4 rounded-tr-xl rounded-br-xl rounded-bl-xl max-w-max;
   }
 }
