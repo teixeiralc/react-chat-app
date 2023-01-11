@@ -1,8 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { AuthContext, AuthContextProvider } from './Context/AuthContext';
 import { Home, Login, Register } from './pages';
 
 const App = () => {
+  const { curUser } = React.useContext(AuthContext);
+
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -14,9 +17,11 @@ const App = () => {
 
 const WrappedApp = () => {
   return (
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <AuthContextProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </AuthContextProvider>
   );
 };
 
