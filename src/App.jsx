@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { AuthContext, AuthContextProvider } from './Context/AuthContext';
+import { AuthContextProvider } from './Context/AuthContext';
+import { ChatContextProvider } from './Context/ChatContext';
 import { Home, Login, Register } from './pages';
 import ProtectedRoute from './Helper/ProtectedRoute';
 
@@ -26,9 +27,11 @@ const App = () => {
 const WrappedApp = () => {
   return (
     <AuthContextProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <ChatContextProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ChatContextProvider>
     </AuthContextProvider>
   );
 };
