@@ -47,7 +47,7 @@ const Search = () => {
     try {
       const res = await getDoc(doc(db, 'chats', combinedUid));
 
-      // Create a chat collection if it doesn't
+      // Create a chat collection if it doesn't exists
       if (!res.exists()) {
         await setDoc(doc(db, 'chats', combinedUid), { messages: [] });
 
