@@ -6,8 +6,6 @@ import { Home, Login, Register } from './pages';
 import ProtectedRoute from './Helper/ProtectedRoute';
 
 const App = () => {
-  // const { curUser } = React.useContext(AuthContext);
-
   return (
     <Routes>
       <Route
